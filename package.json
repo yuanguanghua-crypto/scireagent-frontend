@@ -1,0 +1,51 @@
+{
+  "name": "web3.0",
+  "version": "3.2.0",
+  "private": true,
+  "scripts": {
+    "build": "vue-cli-service build",
+    "dev": "vue-cli-service serve --hot",
+    "deploy-dev": "deploy-cli-service deploy --mode dev"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.14.3",
+    "@popperjs/core": "^2.11.8",
+    "animejs": "^3.2.2",
+    "axios": "^0.21.1",
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^5.3.3",
+    "dayjs": "^1.10.4",
+    "echarts": "^5.1.1",
+    "file-saver": "^2.0.5",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "qrcode": "^1.4.4",
+    "qs": "^6.11.2",
+    "regenerator-runtime": "^0.13.11",
+    "vue": "^2.6.10",
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-count-to": "^1.0.13",
+    "vue-router": "^3.0.3",
+    "vue-seamless-scroll": "^1.1.23",
+    "vue-simple-uploader": "^0.7.4",
+    "vue-style-loader": "^4.1.3",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.1.3",
+    "xlsx": "^0.17.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "crypto-js": "^4.0.0",
+    "deploy-cli-service": "^1.2.2",
+    "jsencrypt": "^3.0.0",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  }
+}
