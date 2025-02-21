@@ -47,107 +47,30 @@
                     </ul>
                 </div>
             </div>
-            <div class="navigation">
-                
 
+            <div class=" navigation clearfix">
 
-
-                <nav class="navbar navbar-inverse navbar-static-top">
-                    <div id="setuserbar" class="navbar-brand menuitem" style="padding-left: 5px;float: right;display: none">
-                        <div id="username" style="">用户xxx</div>
-                        <div class="submenu">
-                            <div style="padding-top: 20px;padding-bottom: 20px" align="center"><a id="usermess" href="" style="color: #4cae4c;padding-bottom: 15px">新消息<span style="color: #c12e2a">(11)</span></a></div>
-                            <div style="padding-bottom: 20px" align="center"><a style="color: #4cae4c" href="">管理中心</a></div>
-                            <div style="padding-bottom: 20px" align="center"><a style="color: #4cae4c" href="">个人空间</a></div>
-                            <div  style="padding-bottom: 15px" align="center"><a id="quitUser" style="color: #4cae4c" href="">退出登录</a></div>
-                        </div>
-                    </div>
-                </nav>
-                <!-- <div class="navbar-brand" style="padding-top: 5px;padding-right: 3px;float: right;">
-                    <img id="userImg" class="img-circle" src="resource/m2.png" style="float: left; width: 40px;height: 40px;display:none;text-align:center;" ></img>
-                </div> -->
-                <!-- <b-container>
-                    <b-button id="dropdownMenuButton" class="m-3">鼠标经过我</b-button>
-                    <b-dropdown id="dropdownMenu" variant="primary" class="m-3">
-                        <template #button-content>
-                            <em>下拉菜单</em>
-                        </template>
-                        <b-dropdown-item href="#">菜单项 1</b-dropdown-item>
-                        <b-dropdown-item href="#">菜单项 2</b-dropdown-item>
-                        <b-dropdown-item href="#">菜单项 3</b-dropdown-item>
-                    </b-dropdown>
-                </b-container> -->
-                    
-                    <!--   <nav class="navbar navbar-inverse navbar-static-top">
-
-                    <div class="container">
-
-                   <nav class="navbar navbar-expand-lg navbar-collapse">
-                        <a class="navbar-brand" href="#">Navbar</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Features</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown link
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav> -->
-
-                        <!-- <nav class="navbar-toggle-wrapper">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                <span class="menu-icon">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span></span>
-                                <span class="menu-text"> </span>
-                            </button>
-                        </nav>
-
-                        <nav class="navbar-collapse collapse">
-                            <ul id="nav" class="nav navbar-nav">
-                                <li class="dropdown nav-item nav-item-1 active">
-                                    <a target="_self" href="">Nucleotides &amp; Nucleosides</a>
-                                    <span class="droplink level1 glyphicon glyphicon-menu-right"></span>
-                                    <ul class="dropdown-menu nav-2 dropdown-menu-1" role="menu">
-                                        <li>
-                                            <a class="dropdown-toggle" role="button" aria-expanded="false" target="_self" href="">Nucleotides by Structure</a>
-                                            <span class="droplink level2 glyphicon glyphicon-menu-right"></span>
-                                            <ul class="nav-3 dropdown-menu menu2">
-                                                <li><a target="_self" href="">Fluorescent Nucleotides</a></li>
-                                            </ul>
-                                        </li>
+                    <div class="navbar navbar-box">
+                        <div class="navbar-inner">
+                            <ul class="nav nav-pills">
+                                <li class="active menu">首页</li>
+                                <li class="menu dropdown">
+                                    产品列表<span class="caret"></span>
+                                    <ul class="dropdown-menu clearfix">
+                                        <li>产品第一</li>
+                                        <li>产品第二</li>
                                     </ul>
                                 </li>
-                                <li class="dropdown nav-item nav-item-8">
-                                    <a target="_self" href="">RNA Technologies</a>
-                                    <span class="droplink level1 glyphicon glyphicon-menu-right"></span>
-                                </li>
+                                <li class="menu">订购</li>
+                                <li class="menu">购买产品</li>
+                                <li class="menu">关于我们</li>
                             </ul>
-                        </nav>
-
-
+                        </div>
                     </div>
-                </nav> -->
+                    <!--  -->
+
+                          
             </div>
-
-
-
 
         </div>
     </div>
@@ -169,14 +92,6 @@ export default {
         
     },
     mounted() {
-        $("#setuserbar").show();
-        // $("#username").text(j.name);
-        $("#userImg").show();
-        // $('#dropdownMenuButton').hover(function() {
-        //     $('#dropdownMenu').dropdown('toggle'); // 显示下拉菜单
-        // }, function() {
-        //     $('#dropdownMenu').dropdown('toggle'); // 隐藏下拉菜单
-        // });
     },
     beforeDestroy() {
 
@@ -189,8 +104,10 @@ export default {
 <style lang="less" scoped>
 .header {
     position: relative;
+    z-index: 1001;
     width: 100%;
     background-color: #66bb00;
+    height: 30vh;
     .logo {
         float: left;
         width: 280px;
@@ -277,7 +194,7 @@ export default {
     .header-menu {
         position: relative;
         float: right;
-        top: 115px;
+        top: 17vh;
         right: 10px;
         .top-navigation {
             float: right;
@@ -301,69 +218,114 @@ export default {
             }
         }
     }
-    // .navigation {
-    //     float: left;
-    //     margin-bottom: -35px;
-    //     margin-top: 15px;
-
-    //     .navbar-inverse .navbar-nav {
-    //         position: relative;
-    //         padding: 0;
-    //         .li {
-    //             margin-right: 2px;
-    //             display: flex;
-    //             text-align: center;
-    //             background-color: transparent;
-    //             height: 60px;
-    //             padding: 0;
-    //             float: left;
-    //         }
-    //         .nav-item-1 {
-    //             border-bottom: 5px solid #009900;
-    //         }
-    //         .nav-item-2{
-    //             border-bottom: 5px solid #cc0000;
-    //         }
-    //         .active.nav-item-1 > a {
-    //             background-color: #009900;
-    //         }
-
-    //         a {
-    //             color: #fff;
-    //             background-color: #000;
-    //             font-size: 15px;
-    //             font-weight: 500;
-    //             padding: 0;
-    //             display: flex;
-    //             position: relative;
-    //             align-items: center;
-    //             width: 100%;
-    //             justify-content: center;
-    //         }
-
-    //     }
-    // }
+    .navigation {
+        margin-top: 10px;
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+        top: 24vh;
+        .navbar-box{
+            width: 100%;
+        }
+        .navbar-inner{
+            flex-grow: 1
+        }
+    }
 }
+.nav-pills{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    .menu{
+        padding: 20px 40px;
+        width: 10%;
+        height: 4rem;
+        line-height: 4rem;;
+        margin-right: 20px;
+        text-align: center;
+        background-color: #000;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 0;
+        color:#fff;
+        cursor:pointer;
+        // display: flex;
+        // position: relative;
+        // justify-content: center;
+    }
+    .menu:nth-child(1){
+        border-bottom: 5px solid #66bb00;
+    }
+    .menu:nth-child(2){
+        border-bottom: 5px solid #cc0000;
+    }
+    .menu:nth-child(3){
+        border-bottom: 5px solid #000066;
+    }
+    .menu:nth-child(4){
+        border-bottom: 5px solid #0066cc;
+    }
+    .menu:nth-child(5){
+        border-bottom: 5px solid #ff0099;
+    }
+    .menu:nth-child(6){
+        border-bottom: 5px solid #ff9900;
+    }
+    .menu:nth-child(7){
+        border-bottom: 5px solid #99cc00;
+    }
+    .menu:nth-child(8){
+        border-bottom: 5px solid #00aeef;
+    }
 
-.menubar
-{line-height: 24px;}
- 
-.menubar .menuend
-{clear: both;}
- 
-.menuitem
-{background:gainsboro ; border:none; position: relative; float: left; margin-right: 1em;}
- 
-.menuitem .submenu{
-    position: absolute; 
-    top: 25px; 
-    left: -1px; 
-    z-index: 9999;
-    background: #EAEAEA; 
-    border: 1px solid #EAEAEA; 
-    width: 6em;
+
+
+
+    .menu:nth-child(1):hover{
+        background-color: #66bb00;
+    }
+    .menu:nth-child(2):hover{
+        background-color: #cc0000;
+    }
+    .menu:nth-child(3):hover{
+        background-color: #000066;
+    }
+    .menu:nth-child(4):hover{
+        background-color: #0066cc;
+    }
+    .menu:nth-child(5):hover{
+        background-color: #ff0099;
+    }
+    .menu:nth-child(6):hover{
+        background-color: #ff9900;
+    }
+    .menu:nth-child(7):hover{
+        background-color: #99cc00;
+    }
+    .menu:nth-child(8):hover{
+        background-color: #00aeef;
+    }
+
 }
- 
-.menuitem .submenu{display: none;}
-.menuitem:hover .submenu{display: block;}
+.navbar .nav > li .dropdown-menu {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0;
+}
+.dropdown-menu li{
+    border-bottom: 1px solid #333;
+    height: 2rem;
+    line-height: 2rem;
+}
+.dropdown-menu li:hover{
+    background-color: #333;
+}
+.navbar .nav > li:hover .dropdown-menu {
+    
+    display: block;
+}
 </style>
