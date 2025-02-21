@@ -48,12 +48,41 @@
                 </div>
             </div>
             <div class="navigation">
+                
+
+
+
                 <nav class="navbar navbar-inverse navbar-static-top">
+                    <div id="setuserbar" class="navbar-brand menuitem" style="padding-left: 5px;float: right;display: none">
+                        <div id="username" style="">用户xxx</div>
+                        <div class="submenu">
+                            <div style="padding-top: 20px;padding-bottom: 20px" align="center"><a id="usermess" href="" style="color: #4cae4c;padding-bottom: 15px">新消息<span style="color: #c12e2a">(11)</span></a></div>
+                            <div style="padding-bottom: 20px" align="center"><a style="color: #4cae4c" href="">管理中心</a></div>
+                            <div style="padding-bottom: 20px" align="center"><a style="color: #4cae4c" href="">个人空间</a></div>
+                            <div  style="padding-bottom: 15px" align="center"><a id="quitUser" style="color: #4cae4c" href="">退出登录</a></div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- <div class="navbar-brand" style="padding-top: 5px;padding-right: 3px;float: right;">
+                    <img id="userImg" class="img-circle" src="resource/m2.png" style="float: left; width: 40px;height: 40px;display:none;text-align:center;" ></img>
+                </div> -->
+                <!-- <b-container>
+                    <b-button id="dropdownMenuButton" class="m-3">鼠标经过我</b-button>
+                    <b-dropdown id="dropdownMenu" variant="primary" class="m-3">
+                        <template #button-content>
+                            <em>下拉菜单</em>
+                        </template>
+                        <b-dropdown-item href="#">菜单项 1</b-dropdown-item>
+                        <b-dropdown-item href="#">菜单项 2</b-dropdown-item>
+                        <b-dropdown-item href="#">菜单项 3</b-dropdown-item>
+                    </b-dropdown>
+                </b-container> -->
+                    
+                    <!--   <nav class="navbar navbar-inverse navbar-static-top">
+
                     <div class="container">
 
-
-                        
-                    <!-- <nav class="navbar navbar-expand-lg navbar-collapse">
+                   <nav class="navbar navbar-expand-lg navbar-collapse">
                         <a class="navbar-brand" href="#">Navbar</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -80,7 +109,7 @@
                         </div>
                     </nav> -->
 
-                        <nav class="navbar-toggle-wrapper">
+                        <!-- <nav class="navbar-toggle-wrapper">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                 <span class="menu-icon">
                                 <span class="icon-bar"></span>
@@ -114,7 +143,7 @@
 
 
                     </div>
-                </nav>
+                </nav> -->
             </div>
 
 
@@ -134,13 +163,20 @@ export default {
         };
     },
     computed: {
-       
+        
     },
     created() {
         
     },
     mounted() {
-        
+        $("#setuserbar").show();
+        // $("#username").text(j.name);
+        $("#userImg").show();
+        // $('#dropdownMenuButton').hover(function() {
+        //     $('#dropdownMenu').dropdown('toggle'); // 显示下拉菜单
+        // }, function() {
+        //     $('#dropdownMenu').dropdown('toggle'); // 隐藏下拉菜单
+        // });
     },
     beforeDestroy() {
 
@@ -308,4 +344,26 @@ export default {
     //     }
     // }
 }
+
+.menubar
+{line-height: 24px;}
+ 
+.menubar .menuend
+{clear: both;}
+ 
+.menuitem
+{background:gainsboro ; border:none; position: relative; float: left; margin-right: 1em;}
+ 
+.menuitem .submenu{
+    position: absolute; 
+    top: 25px; 
+    left: -1px; 
+    z-index: 9999;
+    background: #EAEAEA; 
+    border: 1px solid #EAEAEA; 
+    width: 6em;
+}
+ 
+.menuitem .submenu{display: none;}
+.menuitem:hover .submenu{display: block;}
 </style>

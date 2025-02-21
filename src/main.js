@@ -8,12 +8,17 @@ import '@/utils/directives'; // 自定义指令
 import 'babel-polyfill';
 import 'normalize.css/normalize.css'
 
+import $ from 'jquery';
+window.$ = $; 
+import 'jquery-ui/themes/base/all.css'; // 根据需要选择主题
+import 'jquery-ui/dist/jquery-ui.min.js'; // 引入jQuery UI
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+
 
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);

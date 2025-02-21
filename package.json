@@ -18,6 +18,8 @@
     "dayjs": "^1.10.4",
     "echarts": "^5.1.1",
     "file-saver": "^2.0.5",
+    "jquery": "^3.7.1",
+    "jquery-ui": "^1.14.1",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "qrcode": "^1.4.4",
