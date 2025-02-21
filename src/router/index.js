@@ -10,32 +10,37 @@ export default new Router({
         //     component: () => import( /* webpackChunkName: "main" */ '@/components/login/Login.vue'),
         //     meta: { title: '登录' }
         // },
-        // {
-        //     path: '/',
-        //     component: () => import( /* webpackChunkName: "main" */ '@/layout/Home.vue'),
-        //     meta: { title: '首页' },
-        //     redirect: '/index',
-        //     children: [
-        //         {
-        //             path: '/index',
-        //             name: 'index',
-        //             component: () => import( /* webpackChunkName: "main" */ '@/layout/MainMenu/MainMenu.vue'),
-        //             meta: { title: '业务管理' }
-        //         },
-        //         {
-        //             path: '/system',
-        //             name: 'system',
-        //             component: () => import( /* webpackChunkName: "main" */ '@/layout/MainMenu/SystemMenu.vue'),
-        //             meta: { title: '系统管理' }
-        //         },
-
-        //     ]
-        // },
         {
-          path: '/index',
-          component: () => import( /* webpackChunkName: "map" */ '@/views/index/index.vue'),
-          meta: { title: '首页' }
+            path: '/',
+            component: () => import( /* webpackChunkName: "main" */ '@/layout/Home.vue'),
+            meta: { title: '首页' },
+            redirect: '/index',
+            children: [
+                {
+                    path: '/index',
+                    name: 'index',
+                    component: () => import( /* webpackChunkName: "main" */ '@/views/index/index.vue'),
+                    meta: { title: '业务管理' }
+                },
+                // {
+                //     path: '/system',
+                //     name: 'system',
+                //     component: () => import( /* webpackChunkName: "main" */ '@/layout/MainMenu/SystemMenu.vue'),
+                //     meta: { title: '系统管理' }
+                // },
+
+            ]
         },
+        // {
+        //   path: '/',
+        //   component: () => import( /* webpackChunkName: "map" */ '@/layout/Home.vue'),
+        //   meta: { title: '首页' }
+        // },
+        // {
+        //   path: '/index',
+        //   component: () => import( /* webpackChunkName: "map" */ '@/views/index/index.vue'),
+        //   meta: { title: '首页' }
+        // },
         {
           path: '/403',
           component: () => import( /* webpackChunkName: "main" */ '@/components/error/403.vue'),
