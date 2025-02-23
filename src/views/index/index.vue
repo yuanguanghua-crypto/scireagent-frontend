@@ -90,7 +90,7 @@
                 <div style="display: inline-block; margin:20px 0; width:100%;">
                     <h1>International Distributors</h1>			
                     <form name="mapform" class="mapform" action="">				
-                        <div class="mapform-inner">
+                        <div class="mapform-inner clearfix">
                             <div class="select-style">
                                 <select id="mapform-country-list" class="form-control mapform-country-list" name="country">
                                     <option value="au">Australia</option>

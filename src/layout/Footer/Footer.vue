@@ -4,7 +4,7 @@
             
             <div class="row">
                 <div class="col-md-3">
-                    <h4>©2001 – 2025 Jena Bioscience GmbH</h4>
+                    <h4>©2001 – 2025 试剂网站</h4>
                     <p><a href="">Sitemap</a> | <a href="">Imprint</a> | <a href="">Privacy Statement</a></p>
                     <div class="socialmedia">
                         <a target="_blank" href=""><img src="/styles/images/icon-facebook.png" alt="facebook icom"></a>
