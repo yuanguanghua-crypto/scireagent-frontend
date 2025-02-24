@@ -33,7 +33,7 @@
                 <div class="news-item-subheader">
                     Need a selection antibiotic for your organism? Nourseothricin can be used for selection of 
                     over 100 different species from all kingdoms of life – at affordable costs! 
-                    <a href=""><span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+                    <a href=""><span class="fas fa-arrow-circle-right"></span></a>
                 </div>
             </div>
             <div class="col-md-3 news-item">
@@ -41,7 +41,7 @@
                 <div class="news-item-headline">Molecular Biology Products Tailored to Your Needs – Bulk &amp; OEM Options Available!</div>
                 <div class="news-item-subheader">Are you looking for reliable qPCR mixes, polymerases or nucleotides for large scale 
                     applications? Jena Bioscience provides you with bulk and OEM supply options tailored to your research laboratory or biotech company! 
-                    <a href=""><span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+                    <a href=""><span class="fas fa-arrow-circle-right"></span></a>
                 </div>
             </div>
             <div class="col-md-3 news-item">
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="row newslink"><a href="">more news ...</a></div>
+        <div class="row newslink"><a href="">更多 ...</a></div>
     </div>
     <!-- 2 -->
     <!-- 3 -->
@@ -61,39 +61,39 @@
         <div class="row">
 
             <div class="col-md-6">
-                <h1>Open Positions</h1>
+                <h1>开放职位</h1>
                 <ul class="downloads">
                     <li>
-                        <span class="marker glyphicon glyphicon-circle-arrow-right"></span>
-                        <a href="">Initiativbewerbungen/Speculative Applications</a>
+                        <span class="marker fas fa-arrow-circle-right"></span>
+                        <a href="">推测性应用程序</a>
                     </li>
                     <li></li>
                     <li>
-                        <span class="marker glyphicon glyphicon-circle-arrow-right"></span>
-                        <a href="">IT-Administrator/Systembetreuer (m/w/d)</a>
+                        <span class="marker fas fa-arrow-circle-right"></span>
+                        <a href="">IT管理员/系统管理员 (m/w/d)</a>
                     </li>
                     <li></li>
                 </ul>
-                <div class="morelink"><a href="/about-us/careers">more...</a></div>
-                <h1>Catalogs and Brochures</h1>
+                <div class="morelink"><a href="/about-us/careers">更多...</a></div>
+                <h1>目录和小册子</h1>
                 <ul class="downloads">
-                    <li><span class="marker glyphicon glyphicon-circle-arrow-right"></span><a href="" target="_blank">LEXSY Brochure</a></li>
+                    <li><span class="marker fas fa-arrow-circle-right"></span><a href="" target="_blank">LEXSY宣传册</a></li>
                     <li></li>
-                    <li><span class="marker glyphicon glyphicon-circle-arrow-right"></span><a href="" target="_blank">Your Partner in Molecular Biology</a></li>
+                    <li><span class="marker fas fa-arrow-circle-right"></span><a href="" target="_blank">您的分子生物学合作伙伴</a></li>
                     <li></li>
-                    <li><span class="marker glyphicon glyphicon-circle-arrow-right"></span><a href="" target="_blank">Real-Time PCR</a></li>
+                    <li><span class="marker fas fa-arrow-circle-right"></span><a href="" target="_blank">实时PCR</a></li>
                     <li></li>
-                    <li><span class="marker glyphicon glyphicon-circle-arrow-right"></span><a href="" target="_blank">Bulk and OEM Production</a></li>
+                    <li><span class="marker fas fa-arrow-circle-right"></span><a href="" target="_blank">批量和OEM生产</a></li>
                     <li></li>
                 </ul>
-                <div class="morelink"><a href="/downloads">more...</a></div>
+                <div class="morelink"><a href="/downloads">更多...</a></div>
                 <div style="display: inline-block; margin:20px 0; width:100%;">
-                    <h1>International Distributors</h1>			
+                    <h1>国际分销商</h1>			
                     <form name="mapform" class="mapform" action="">				
                         <div class="mapform-inner clearfix">
                             <div class="select-style">
                                 <select id="mapform-country-list" class="form-control mapform-country-list" name="country">
-                                    <option value="au">Australia</option>
+                                    <option value="au">全球</option>
                                     <option value="be">Belgium</option>
                                     <option value="br">Brazil</option>
                                 </select>
@@ -105,10 +105,10 @@
             </div>
 
             <div class="col-md-6">
-                <h1>Search Citations</h1>
+                <h1>搜索引文</h1>
                 <p>
-                    <a href=""><strong>Search and filter all publications that cite Jena Bioscience's products by technique or by product.</strong></a><br>
-                    <strong>View publication full texts or figures and access the respective product pages.</strong>
+                    <a href=""><strong>按技术或产品搜索和过滤引用Jena Bioscience产品的所有出版物。</strong></a><br>
+                    <strong>查看出版物全文或数字，并访问相应的产品页面。</strong>
                 </p>
                 <p><br>
                     <object id="wobj-1091-ci" type="text/html" data="" style="width: 100%; height: 439px; border-width: 1px;"></object> 
@@ -295,7 +295,7 @@ export default {
     .row {
         padding-bottom: 15px;
         div {
-            padding: 10px 35px;
+            padding: 0 35px;
         }
         h1 {
             border-bottom: 1px solid #ccc;
@@ -434,4 +434,5 @@ export default {
 // /deep/.carousel-control-next{
 //     display: none;
 // }
+
 </style>

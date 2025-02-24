@@ -1,21 +1,8 @@
 <template>
 <div class="header clearfix">
-        <div class="container">
+        <div class="clearfix">
 
-
-            <!-- <b-navbar toggleable="lg" type="dark" class="logo">
-                <b-navbar-brand href="#">
-                    <img src="../../assets/img/logo.png" />
-                </b-navbar-brand>
-            </b-navbar> -->
-            <!-- <div class="logo">
-                <a href="/"><img src="../../assets/img/logo.png" alt="Jena Bioscience home"></a>
-            </div> -->
-            
-
-            <!--  -->
-
-            <b-container class="bv-example-row">
+            <b-container class="bv-example-row clearfix">
                 <b-row>
                     <b-col cols="2">
                         <div class="logo">
@@ -29,37 +16,45 @@
                                 
                             <div class="boxnotebasket">
                                 <p>
-                                    <a href=""><span class="glyphicon glyphicon-shopping-cart"> </span><b>Your Basket/Online Quote</b></a>
-                                    <br>Items: 0 (0,00 €)<br>
-                                    <a href="">» Search &amp; Order</a><br>
-                                    <a href="">» Sign in / Register</a>
+                                    <!-- <i class="zi zi_user"></i> -->
+                                    <a href="">
+                                        <b-nav-item :to="{ name: 'basket' }"><span class="fas fa-shopping-cart"></span> &nbsp;<b>您的购物篮/在线报价</b></b-nav-item>
+                                    </a>                                    
+                                    <br>项目: 0 (0,00 €)<br>
+                                    <a href="">» 搜索和订阅</a><br>
+                                    <a href="">» 登录注册</a>
                                 </p>
                             </div>
                             <div class="search">
-                                <form id="searchform" name="searchf" action="https://www.jenabioscience.com/search" method="post" onsubmit="if(document.searchf.searchstring.value.length<2){return false;}else{return true;}">
-                                    <input class="form-control" type="text" name="searchstring" placeholder="Product, Cat.#, CAS#" size="8"><button type="submit" class="glyphicon glyphicon-search search-submit" value=""></button>
+                                <form id="searchform" name="searchf" action="https://www.jenabioscience.com/search" method="post" 
+                                    onsubmit="if(document.searchf.searchstring.value.length<2){return false;}else{return true;}">
+                                    <input class="form-control" type="text" name="searchstring" placeholder="产品, Cat.#, CAS#" size="8">
+                                    <button type="submit" class="fas fa-search search-submit" value=""></button>
                                 </form>
                             </div>
-                            <div class="citationsearch">
-                                &nbsp;&nbsp;&nbsp;<a style="color:#fff;" href="">» Search citations</a>
-                            </div>
+                            <div class="citationsearch">&nbsp;&nbsp;&nbsp;<a style="color:#fff;" href="">» 搜索引文</a></div>
                         </div>
                         <!--  -->
-                        <div class="header-menu">
-                            <div class="top-navigation">
+                        <div class="header-menu clearfix">
+                            <div class="top-navigation clearfix">
                                 <ul>
-                                    <li><a target="_self" href="">My Account</a></li>
-                                    <li><a target="_self" href="">Order Information</a></li>
-                                    <li><a target="_self" href="">About us</a></li>
-                                    <li><a target="_self" href="">Contact</a></li>
-                                    <li><a target="_self" href="">Downloads</a></li>
-                                    <li><a target="_self" href="">Search Tools</a></li>
+                                    <li><a target="_self" href="">我的账户</a></li>
+                                    <li><a target="_self" href="">订单信息</a></li>
+                                    <li><a target="_self" href="">关于我们</a></li>
+                                    <li><a target="_self" href="">联系人</a></li>
+                                    <li><a target="_self" href="">下载</a></li>
+                                    <li><a target="_self" href="">搜索工具</a></li>
                                 </ul>
                             </div>
                         </div>
                     </b-col>
+                </b-row>
+                <div class="container clearfix" style="height:30px"></div>
 
-                    <b-col cols="6">
+            </b-container>
+            <b-container class="bv-example-row clearfix">
+                <b-row class="clearfix">
+                    <b-col cols="12">
                         <div class="navigation clearfix">
                             <!-- 导航项 -->
                             <b-navbar toggleable="lg" type="dark">
@@ -67,36 +62,36 @@
                                 <b-collapse id="nav-collapse" is-nav>
                                     <b-navbar-nav>
                                         <b-nav-item-dropdown text="核苷酸和核苷" variant="hover">
-                                            <b-dropdown-item href="#">Action</b-dropdown-item>
-                                            <b-dropdown-item href="#">Another action</b-dropdown-item>
+                                            <b-dropdown-item href="#">核苷酸结构</b-dropdown-item>
+                                            <b-dropdown-item href="#">核苷酸(按应用)</b-dropdown-item>
+                                        </b-nav-item-dropdown>
+                                        <b-nav-item-dropdown text="点击化学" variant="hover">
+                                            <b-dropdown-item href="#">按化学成分点击试剂</b-dropdown-item>
                                         </b-nav-item-dropdown>
                                         <b-nav-item-dropdown text="分子生物学" variant="hover">
-                                            <b-dropdown-item href="#">Action</b-dropdown-item>
-                                            <b-dropdown-item href="#">Another action</b-dropdown-item>
+                                            <b-dropdown-item href="#">单个组件</b-dropdown-item>
+                                            <b-dropdown-item href="#">PCR经典</b-dropdown-item>
+                                            <b-dropdown-item href="#">实时PCR</b-dropdown-item>
                                         </b-nav-item-dropdown>
-                                        <b-nav-item-dropdown text="表达式" variant="hover">
-                                            <b-dropdown-item href="#">Action</b-dropdown-item>
-                                            <b-dropdown-item href="#">Another action</b-dropdown-item>
+                                        <b-nav-item-dropdown text="词法表达式" variant="hover">
+                                            <b-dropdown-item href="#">LEXSY配置 </b-dropdown-item>
+                                            <b-dropdown-item href="#">LEXSY栽培</b-dropdown-item>
                                         </b-nav-item-dropdown>
-                                        <b-nav-item-dropdown text="蛋白质" variant="hover">
-                                            <b-dropdown-item href="#">Action</b-dropdown-item>
-                                            <b-dropdown-item href="#">Another action</b-dropdown-item>
+                                        <b-nav-item-dropdown text="蛋白质类" variant="hover">
+                                            <b-dropdown-item href="#">重组蛋白</b-dropdown-item>
+                                            <b-dropdown-item href="#">天然蛋白质</b-dropdown-item>
                                         </b-nav-item-dropdown>
-                                        <b-nav-item-dropdown text="晶体学和冷冻电镜" variant="hover">
-                                            <b-dropdown-item href="#">Action</b-dropdown-item>
-                                            <b-dropdown-item href="#">Another action</b-dropdown-item>
+                                        <b-nav-item-dropdown text="晶体学和cryo-em" variant="hover">
+                                            <b-dropdown-item href="#">赛选</b-dropdown-item>
+                                            <b-dropdown-item href="#">赛选膜蛋白</b-dropdown-item>
                                         </b-nav-item-dropdown>
                                         <b-nav-item-dropdown text="探针与表观遗传学" variant="hover">
-                                            <b-dropdown-item href="#">Action</b-dropdown-item>
-                                            <b-dropdown-item href="#">Another action</b-dropdown-item>
+                                            <b-dropdown-item href="#">无功组件</b-dropdown-item>
+                                            <b-dropdown-item href="#">DNA/cDNA标记</b-dropdown-item>
                                         </b-nav-item-dropdown>
-                                        <b-nav-item-dropdown text="表达式" variant="hover">
-                                            <b-dropdown-item href="#">Action</b-dropdown-item>
-                                            <b-dropdown-item href="#">Another action</b-dropdown-item>
-                                        </b-nav-item-dropdown>
-                                        <b-nav-item-dropdown text="RAN" variant="hover">
-                                            <b-dropdown-item href="#">Action</b-dropdown-item>
-                                            <b-dropdown-item href="#">Another action</b-dropdown-item>
+                                        <b-nav-item-dropdown text="RAN技术" variant="hover">
+                                            <b-dropdown-item href="#">生产RNA原料</b-dropdown-item>
+                                            <b-dropdown-item href="#">RNA合成</b-dropdown-item>
                                         </b-nav-item-dropdown>
                                     </b-navbar-nav>
                                 </b-collapse>
@@ -144,7 +139,7 @@ export default {
     z-index: 1001;
     width: 100%;
     background-color: #66bb00;
-    height: 30vh;
+    // height: 30vh;
     .logo {
         float: left;
         width: 280px;
@@ -205,6 +200,10 @@ export default {
                     font-size: 12px;
                 }
             }
+            
+        }
+        /deep/.citationsearch{
+            font-size: 12px
         }
         #searchform {
             position: relative;
@@ -222,7 +221,9 @@ export default {
             position: absolute;
             top: 0;
             right: 0;
+            width: 30px;
             padding: 6px;
+            height: 30px;
             background-color: transparent;
             border: 0;
             font-size: 21px;
@@ -231,12 +232,12 @@ export default {
     .header-menu {
         position: relative;
         float: right;
-        top: 17vh;
         right: 10px;
         .top-navigation {
             float: right;
             clear: both;
             position: relative;
+            top: 110px;
             z-index: 110;
             ul {
                 margin: 0;
@@ -244,22 +245,32 @@ export default {
                 li {
                     list-style-type: none;
                     display: inline;
-                    padding: 2px 0;
-                    margin-right: 10px;
+                    height: 30px;
+                    line-height:30px;
+                    border-left: 1px solid #fff;
+                    padding: 0 10px;
                     a {
                         color: #fff;
                         font-size: 14px;
                         font-weight: 400;
                     }
                 }
+                li:nth-child(1){
+                    border-left: 0 solid #fff;
+                }
             }
         }
     }
+    .bv-example-row{
+        // position: relative;
+    }
+
     .navigation {
-        margin-top: 30px;
+        // margin-top: 30px;
         // width: 100%;
         position: absolute;
         z-index: 999;
+        bottom: -40px;
         // top: 24vh;
         // left: 14%;
         // right: 14%;
@@ -273,14 +284,14 @@ export default {
             width: 100%;
         }
         .nav-item{
-            margin: 0;
-            width: 100%;
+            min-width: 140px;
             text-align: center;
             background-color: #000;
             color: #fff;
             border-radius: 0;
             margin: 0 5px;
-            line-height: 3.5rem;
+            height: 60px;
+            line-height: 45px;
         }
         .nav-item:nth-child(1){
             border-bottom: 5px solid #66bb00;
@@ -344,14 +355,14 @@ export default {
             border-radius: 0;
             .dropdown-item{
                 color: #fff;
-                line-height: 2rem;
+                line-height: 1.5rem;
+                font-size: 14px;
             }
-            .dropdown-item:hover{
-                color: #fff;
-                background-color: #000;
-                line-height: 2rem;
-            }
+            /deep/.dropdown-item:hover{
+                background-color: #888;
+            } 
         }
+       
         /deep/.dropdown-toggle::after {
             display: none;
         }
