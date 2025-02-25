@@ -5,6 +5,8 @@ import 'nprogress/nprogress.css' // progress bar style
 
 router.beforeEach((to, from, next) => {    
     NProgress.start();
+    console.log(from)
+    console.log(to)
     next()
     // if (findWhiteList(to.path)) {
     //     next()

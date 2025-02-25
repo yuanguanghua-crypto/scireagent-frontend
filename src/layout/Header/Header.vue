@@ -20,7 +20,7 @@
                                     <a href="">
                                         <b-nav-item :to="{ name: 'basket' }"><span class="fas fa-shopping-cart"></span> &nbsp;<b>您的购物篮/在线报价</b></b-nav-item>
                                     </a>                                    
-                                    <br>项目: 0 (0,00 €)<br>
+                                    <br>项目: {{total}} (0,00 €)<br>
                                     <a href="">» 搜索和订阅</a><br>
                                     <a href="">» 登录注册</a>
                                 </p>
@@ -115,21 +115,27 @@ export default {
     },
     data() {
         return {
+            total: 0
         };
     },
     computed: {
         
+
     },
     created() {
         
     },
     mounted() {
+        bus.$on('updateQuantity', this.getQuantity)
     },
     beforeDestroy() {
 
     },
     methods: {
-
+        getQuantity(val){
+            console.log('-s-s------s--',val)
+            this.total = val
+        }
     }
 };
 </script>
@@ -358,57 +364,17 @@ export default {
                 line-height: 1.5rem;
                 font-size: 14px;
             }
-            /deep/.dropdown-item:hover{
-                background-color: #888;
-            } 
+            
         }
-       
+        /deep/.dropdown-item:hover{
+            color: #fff;
+            background-color: #888;
+        } 
         /deep/.dropdown-toggle::after {
             display: none;
         }
     }
 }
-// .nav-pills{
-//     position: relative;
-//     width: 100%;
-//     display: flex;
-//     justify-content: left;
-//     .menu{
-//         padding: 20px 40px;
-//         width: 8%;
-//         height: 4rem;
-//         line-height: 4rem;;
-//         margin: 0 10px;
-//         text-align: center;
-//         background-color: #000;
-//         font-size: 15px;
-//         font-weight: 500;
-//         padding: 0;
-//         color:#fff;
-//         cursor:pointer;
-//         // display: flex;
-//         // position: relative;
-//         // justify-content: center;
-//     }
-    
-
-// }
-// .navbar .nav > li .dropdown-menu {
-//     margin: 0;
-//     width: 100%;
-//     text-align: center;
-//     background-color: #000;
-//     color: #fff;
-//     border-radius: 0;
-// }
-// .dropdown-menu li{
-//     border-bottom: 1px solid #333;
-//     height: 2rem;
-//     line-height: 2rem;
-// }
-// .dropdown-menu li:hover{
-//     background-color: #333;
-// }
 /deep/.dropdown:hover .dropdown-menu {
   display: block; /* 显示下拉菜单 */
 }

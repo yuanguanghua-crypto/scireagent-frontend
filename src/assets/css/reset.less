@@ -20,15 +20,17 @@ time, mark, audio, video {
 html,body,#app{
     height: 100%;
 }
-body {
+/deep/body {
     background-repeat: no-repeat;
     min-height: 100%;
     font-family: 'Fira Sans', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.65;
     background-color: #f6f6f6;
     overflow-x: hidden;
 }
+
+
 :focus {
     outline: 1;
 }
@@ -61,5 +63,29 @@ li{
 /* 对于Firefox */
 .container {
     scrollbar-width: none; /* Firefox 64 */
+}
+.cont-box{
+    padding-top: 60px;
+}
+
+.btn, .inp_submit2 {
+    color: #ffffff;
+    background-color: #35a807;
+    border-radius: 0;
+    border: none;
+    padding: 4px 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
 }
 

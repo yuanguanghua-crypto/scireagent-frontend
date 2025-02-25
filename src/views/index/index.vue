@@ -1,5 +1,6 @@
 <template>
 <div>
+    <vHeader></vHeader>
     <div class="slider swiper swiper-container-initialized swiper-container-horizontal">
         <b-carousel 
             :interval="4000"
@@ -141,15 +142,21 @@
         </div>
     </div>
     <!-- 3 -->
+    <vFooter></vFooter>
 </div>  
    
 </template>
 <script>
+import vHeader from '../../layout/Header/Header.vue';
+import vFooter from '../../layout/Footer/Footer.vue';
 import dayjs from 'dayjs'
 import * as mUtils from '@/utils/mUtils'
 import bus from '@/utils/bus';
 export default {
-    components: {},
+    components: {
+        vHeader,
+        vFooter
+    },
     data () {
         return {
             url01: require("../../assets/img/a.jpg"),
