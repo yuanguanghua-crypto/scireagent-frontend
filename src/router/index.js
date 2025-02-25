@@ -33,7 +33,7 @@ export default new Router({
             path: '/search',
             name:'search',
             component: () => import( /* webpackChunkName: "service" */ '@/views/search/index.vue'),
-            meta: { title: '关于我们' }
+            meta: { title: '搜索' }
         },
 
 
