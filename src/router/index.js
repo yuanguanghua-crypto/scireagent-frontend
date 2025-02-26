@@ -5,11 +5,11 @@ export default new Router({
     mode: 'history',
     routes: [
         {
-          path: '/',
-          component: () => import( /* webpackChunkName: "main" */ '@/views/index/index.vue'),
-          meta: { title: '首页' },
-          redirect: '/index',
-          children: []
+            path: '/',
+            component: () => import( /* webpackChunkName: "main" */ '@/views/index/index.vue'),
+            meta: { title: '首页' },
+            redirect: '/index',
+            children: []
         },
         {
             path: '/index',
@@ -18,13 +18,13 @@ export default new Router({
             meta: { title: '首页' }
         },
         {
-            path: '/basket',
+            path: '/my-account/basket',
             name:'basket',
-            component: () => import( /* webpackChunkName: "service" */ '@/views/cart/index.vue'),
+            component: () => import( /* webpackChunkName: "service" */ '../views/cart/index.vue'),
             meta: { title: '购物车' }
         },
         {
-            path: '/aboutUs',
+            path: '/about-us/about-us',
             name:'aboutUs',
             component: () => import( /* webpackChunkName: "service" */ '@/views/aboutUs/index.vue'),
             meta: { title: '关于我们' }
@@ -35,6 +35,19 @@ export default new Router({
             component: () => import( /* webpackChunkName: "service" */ '@/views/search/index.vue'),
             meta: { title: '搜索' }
         },
+        // 产品
+        {
+            path: '/productOne',
+            name:'productOne',
+            component: () => import( /* webpackChunkName: "service" */ '@/views/product/index.vue'),
+            meta: { title: '搜索' }
+        },
+
+
+
+
+
+
 
 
 

@@ -21,9 +21,14 @@
                         <div class="table-responsive">
                             <b-table :items="cart" :fields="fields" striped responsive hover class="table product-table table-striped table-coloured">
                                 <template v-slot:cell(quantity)="row">
-                                    <input v-model="row.item.quantity" @input="changeQuantity()" style="width: 60px; text-align: center"></input>
+                                    <b-form-input v-model="row.item.quantity" maxlength="5" @input="changeQuantity()" 
+                                        style="width: 80px; text-align: center; border: 1px solid #eee;border-radius:5px;height: 30px;">
+                                    </b-form-input>
                                     <!-- <b-button size="sm" @click="decrementQuantity(row.item)">-</b-button>
                                     <b-button size="sm" @click="incrementQuantity(row.item)">+</b-button> -->
+                                </template>
+                                <template #cell(total)="row">
+                                    {{ calculateItemTotal(row.item) }}
                                 </template>
                                 <template v-slot:cell(actions)="row">
                                     <i class="far fa-trash-alt" @click="removeItem(row.item)" style="font-size: 120%;"  />
@@ -110,62 +115,54 @@ export default {
                 { key: 'quantity', label: '数量' },
                 { key: 'name', label: '规格' },
                 { key: 'specification', label: '产品' },
-                { key: 'price', label: '金额' },
-                { key: 'unitPrice', label: '单价' },
-                { key: 'totalPrice', label: '总额' },
+                { key: 'price', label: '单价' },
+                { key: 'total', label: '总价' },
                 { key: 'actions', label: '' }
             ],
             cart: [
-                { id: 1, specification: 'NU-247-CY5', name: 'N6-(6-氨基己基)-ADP-Cy5', unitPrice: 9.9, price: 100,  quantity: 1 },
-                { id: 2, specification: 'NU-247-CY4', name: 'N6-(6-氨基己基)-ADP-Cy3', unitPrice: 8.8, price: 1234, quantity: 2 },
-                { id: 3, specification: 'NU-247-CY5', name: 'N6-(6-氨基己基)-ADP-Cy2', unitPrice: 6.6, price: 789, quantity: 1 },
+                { id: 1, specification: 'NU-247-CY5', name: 'N6-(6-氨基己基)-ADP-Cy5', price: 5, quantity: 1 },
+                { id: 2, specification: 'NU-247-CY4', name: 'N6-(6-氨基己基)-ADP-Cy3', price: 10, quantity: 2 },
+                { id: 3, specification: 'NU-247-CY5', name: 'N6-(6-氨基己基)-ADP-Cy2', price: 6, quantity: 1 },
             ],
-            quantity: 0
+            quantity: 0,
+            grossPrice: 0
         }
     },
-    created() {
-        if(this.cart.length > 0){
-            this.quantity = this.cart.reduce((accumulator, currentValue) => {
-                return accumulator + ( + currentValue.quantity ? +currentValue.quantity:0);
-            }, 0);
-        }
-    },    
+    created() {},    
     watch: {
         quantity: {
             handler(newVal, oldVal) {
-                bus.$emit('updateQuantity', newVal)
+                bus.$emit('updateQuantity', this.cart)
             },
             deep: true,
             immediate: true
         }
     },
     mounted(){
-        
+        bus.$emit('updateQuantity', this.cart)
     },
     beforeDestroy() {},
     computed:{},
     methods: {
+        // 计算单个商品总价
+        calculateItemTotal(item) {
+            return (item.price * item.quantity).toFixed(2);
+        },
         changeQuantity(){
-            this.quantity = this.cart.reduce((accumulator, currentValue) => {
-                return accumulator + ( + currentValue.quantity ? +currentValue.quantity:0);
-            }, 0);
+            bus.$emit('updateQuantity', this.cart)
         },
         incrementQuantity(item) {
             item.quantity++;
         },
         decrementQuantity(item) {
-        if (item.quantity > 1) {
-            item.quantity--;
-        }
+            if (item.quantity > 1) {
+                item.quantity--;
+            }
         },
         removeItem(item) {
             this.cart = this.cart.filter(cartItem => cartItem.id !== item.id);
-            if(this.cart.length > 0){
-                this.quantity = this.cart.reduce((accumulator, currentValue) => {
-                    return accumulator + ( + currentValue.quantity ? +currentValue.quantity:0);
-                }, 0);
-            }
-        },
+            bus.$emit('updateQuantity', this.cart)
+        },        
         onSubmit(evt) {
             // evt.preventDefault(); // 阻止表单的默认提交行为
             // const form = this.$refs.form; // 获取表单元素引用
@@ -250,4 +247,9 @@ p, li {
     text-align: right;
     margin-bottom: 40px;
 }
+// .table-responsive {
+//     /deep/thead{
+//         background-color: #ccc
+//     }
+// }
 </style>

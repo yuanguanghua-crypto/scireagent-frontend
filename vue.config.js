@@ -1,6 +1,6 @@
 const proxyTarget = 'http://192.168.113.229:9090'
 module.exports = {
-    publicPath: './',
+    publicPath: '/',
     assetsDir: 'static',
     chainWebpack: config => {
         config.module.rule('js').use('babel-loader').end()

@@ -16,31 +16,25 @@
                                 
                             <div class="boxnotebasket">
                                 <p>
-                                    <!-- <i class="zi zi_user"></i> -->
-                                    <a href="">
-                                        <b-nav-item :to="{ name: 'basket' }"><span class="fas fa-shopping-cart"></span> &nbsp;<b>您的购物篮/在线报价</b></b-nav-item>
-                                    </a>                                    
-                                    <br>项目: {{total}} (0,00 €)<br>
-                                    <a href="">» 搜索和订阅</a><br>
-                                    <a href="">» 登录注册</a>
+                                    <router-link to="/my-account/basket"><span class="fas fa-shopping-cart"></span> &nbsp;<b>您的购物篮/在线报价</b></router-link>
                                 </p>
+                                <p> 项目: {{quantity}} ({{total}} €)</p>
+                                <p> » 搜索和订阅</p>
+                                <p> » 登录注册</p>
                             </div>
                             <div class="search">
-                                <form id="searchform" name="searchf" action="https://www.jenabioscience.com/search" method="post" 
-                                    onsubmit="if(document.searchf.searchstring.value.length<2){return false;}else{return true;}">
-                                    <input class="form-control" type="text" name="searchstring" placeholder="产品, Cat.#, CAS#" size="8">
-                                    <button type="submit" class="fas fa-search search-submit" value=""></button>
-                                </form>
+                                <input class="form-control" type="text" v-model="searchName" name="searchstring" placeholder="产品, Cat.#, CAS#" size="8">
+                                <button type="submit" class="fas fa-search search-submit" @click="goSearch()"></button>
                             </div>
-                            <div class="citationsearch">&nbsp;&nbsp;&nbsp;<a style="color:#fff;" href="">» 搜索引文</a></div>
+                            <div class="citationsearch">&nbsp;&nbsp;&nbsp;» 搜索引文</div>
                         </div>
                         <!--  -->
                         <div class="header-menu clearfix">
                             <div class="top-navigation clearfix">
                                 <ul>
-                                    <li><a target="_self" href="">我的账户</a></li>
+                                    <li><router-link to="/my-account/basket">我的账户</router-link></li>
                                     <li><a target="_self" href="">订单信息</a></li>
-                                    <li><a target="_self" href="">关于我们</a></li>
+                                    <li><router-link to="/about-us/about-us">关于我们</router-link></li>
                                     <li><a target="_self" href="">联系人</a></li>
                                     <li><a target="_self" href="">下载</a></li>
                                     <li><a target="_self" href="">搜索工具</a></li>
@@ -115,26 +109,46 @@ export default {
     },
     data() {
         return {
-            total: 0
+            total: 0,
+            quantity: 0,
+            searchName: ''
         };
     },
-    computed: {
-        
-
-    },
-    created() {
-        
-    },
+    computed: {},
+    created() {},
     mounted() {
         bus.$on('updateQuantity', this.getQuantity)
     },
     beforeDestroy() {
-
+        bus.$off('updateQuantity')
     },
     methods: {
         getQuantity(val){
-            console.log('-s-s------s--',val)
-            this.total = val
+            this.getQuPrice(val);
+        },
+        // 价格波动
+        getQuPrice(cart){
+            if(cart.length > 0){
+                this.quantity = cart.reduce((accumulator, currentValue) => {
+                    return accumulator + ( + currentValue.quantity ? +currentValue.quantity:0);
+                }, 0);
+                this.total = this.grandTotal(cart);
+            }
+        },
+        // 计算全部商品总价
+        grandTotal(val) {
+            return val
+            .reduce((acc, item) => acc + item.price * item.quantity, 0)
+            .toFixed(2);
+        },
+        goSearch(){
+            if(!this.searchName) return
+            this.$router.push({
+                params: {
+                    searchName: this.searchName
+                },
+                name: 'search'
+            });
         }
     }
 };
@@ -198,42 +212,44 @@ export default {
             width: 220px;
             color: #fff;
             padding: 10px;
+            a{                
+                color: #fff;
+            }
             p {
                 font-size: 12px;
-                margin: 0;
-                a {
-                    color: #fff;
-                    font-size: 12px;
-                }
+                margin-bottom: 5px;
             }
             
         }
         /deep/.citationsearch{
-            font-size: 12px
+            font-size: 12px;
+            margin-bottom: 5px;
+            color: #fff;
+            cursor: pointer;
         }
-        #searchform {
+        .search{
             position: relative;
-        }
-        .search .form-control {
-            text-align: left;
-            color: #717171;
-            opacity: 0.7;
-            border: 0;
-            border-radius: 0;
-            margin: 15px 0 0 0;
-        }
-        .search .search-submit {
-            color: #277800;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 30px;
-            padding: 6px;
-            height: 30px;
-            background-color: transparent;
-            border: 0;
-            font-size: 21px;
-        }      
+            .form-control {
+                text-align: left;
+                color: #717171;
+                opacity: 0.7;
+                border: 0;
+                border-radius: 0;
+                margin: 10px 0 5px 0;
+            }
+            .search-submit {
+                color: #277800;
+                position: absolute;
+                top: 2px;
+                right: 3px;
+                width: 30px;
+                padding: 6px;
+                height: 30px;
+                background-color: transparent;
+                border: 0;
+                font-size: 21px;
+            }   
+        }   
     }
     .header-menu {
         position: relative;
@@ -243,7 +259,7 @@ export default {
             float: right;
             clear: both;
             position: relative;
-            top: 110px;
+            top: 125px;
             z-index: 110;
             ul {
                 margin: 0;

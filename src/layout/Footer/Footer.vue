@@ -59,9 +59,9 @@
                     </ul>
                     <div class="h4">杂项</div>
                     <ul>
-                        <li><a target="_self" href="">我的帐户</a></li>
+                        <li><router-link to="/my-account/basket">我的账户</router-link></li>
                         <li><a target="_self" href="">订单信息</a></li>
-                        <li><a target="_self" href="">关于我们</a></li>
+                        <li><router-link to="/about-us/about-us">关于我们</router-link></li>
                         <li><a target="_self" href="">联系人</a></li>
                         <li><a target="_self" href="">下载</a></li>
                         <li><a target="_self" href="">搜索工具</a></li>
@@ -76,22 +76,12 @@
 <script>
 export default {
     data() {
-        return {            
-           
-        };
+        return {};
     },
-    computed: {
-       
-    },
-    watch: {
-       
-    },
-    mounted() {
-        
-    },
-    methods: {
-        
-    }
+    computed: {},
+    watch: {},
+    mounted() {},
+    methods: {}
 };
 </script>
 

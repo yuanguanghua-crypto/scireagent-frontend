@@ -106,7 +106,7 @@
                             <b-carousel 
                                 :interval="4000"
                                 indicators
-                                controls
+                                :controls="false"
                                 background="#f6f6f6"
                                 img-width="100%"
                                 img-height="100%"
@@ -286,5 +286,37 @@ h3 {
     font-weight: 700;
     font-size: 14px;
     margin-top: 10px;
+}
+.contentblock{
+    /deep/.carousel-indicators {
+        position: absolute;
+        height: 15px;
+        right: 0;
+        bottom: 5%;
+        left: 0;
+        z-index: 2;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0;
+        margin-right: 15%;
+        margin-bottom: 0;
+        margin-left: 15%;
+        li{ 
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            opacity: 0.6;
+            margin: 0 5px;
+            border-radius: 50%
+        }
+        li.active{
+            background-color: #227700;
+        }
+        
+    }
 }
 </style>
