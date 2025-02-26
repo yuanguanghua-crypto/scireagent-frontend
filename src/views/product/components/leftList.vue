@@ -112,13 +112,17 @@ export default {
             overflow: hidden;
             text-overflow: ellipsis;
             line-height: 40px;
+            padding: 20px 15px; 
         }
     }
     .is-current > .el-tree-node__content {
         background: #d9ecff;
         position: relative;
     }
-  
+    /deep/.is-current {
+        background-color: #f2f2f2;
+        color: #046500
+    }
 }
 /deep/ .el-tree-node__expand-icon {
     display: none!important;

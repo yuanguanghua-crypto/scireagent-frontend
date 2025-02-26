@@ -54,6 +54,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.cont-box{
+    padding-bottom: 20px;
+}
 .breadcrumb {
     font-size: 12px;
     text-align: left;

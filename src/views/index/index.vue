@@ -348,7 +348,6 @@ export default {
                     box-shadow: none;
                     background: transparent;
                     background-image: none;
-                    -webkit-appearance: none;
                     width: 110%;
                     float: left;
                     height: 34px;
