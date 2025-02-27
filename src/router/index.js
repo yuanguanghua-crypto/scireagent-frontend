@@ -40,10 +40,34 @@ export default new Router({
             path: '/productOne',
             name:'productOne',
             component: () => import( /* webpackChunkName: "service" */ '@/views/product/index.vue'),
-            meta: { title: '搜索' }
+            meta: { title: '产品一' }
+        },
+        {
+            path: '/productTwo',
+            name:'productTwo',
+            component: () => import( /* webpackChunkName: "service" */ '@/views/producTwo/index.vue'),
+            meta: { title: '产品二' }
+        },
+        {
+            path: '/productThree',
+            name:'productThree',
+            component: () => import( /* webpackChunkName: "service" */ '@/views/producThree/index.vue'),
+            meta: { title: '产品三' }
+        },
+        {
+            path: '/producFour',
+            name:'producFour',
+            component: () => import( /* webpackChunkName: "service" */ '@/views/producFour/index.vue'),
+            meta: { title: '产品四' }
+        },
+        {
+            path: '/producFive',
+            name:'producFive',
+            component: () => import( /* webpackChunkName: "service" */ '@/views/producFive/index.vue'),
+            meta: { title: '产品五' }
         },
 
-
+        
 
 
 

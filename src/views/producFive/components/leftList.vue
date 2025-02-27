@@ -1,7 +1,7 @@
 
 <template>
     <div class="contentmenu">
-        <div class="h1"><b>实时PCR</b></div>
+        <div class="h1"><b>核苷酸和核苷</b></div>
         <el-tree
             ref="tree"
             class="tree-area"
@@ -31,7 +31,7 @@ export default {
         return {
             treeData: [{
                 id: 1,
-                name: '实时PCR',
+                name: '核苷酸结构',
                 expanded: true,
                 children: [
                     { id: 2, name: '直接放大' },

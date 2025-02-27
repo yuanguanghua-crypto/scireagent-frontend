@@ -56,8 +56,8 @@
                                 <b-collapse id="nav-collapse" is-nav>
                                     <b-navbar-nav>
                                         <b-nav-item-dropdown text="核苷酸和核苷" variant="hover">
-                                            <b-dropdown-item href="#">核苷酸结构</b-dropdown-item>
-                                            <b-dropdown-item href="#">核苷酸(按应用)</b-dropdown-item>
+                                            <b-dropdown-item href="/productOne">核苷酸结构</b-dropdown-item>
+                                            <b-dropdown-item href="/productTwo">核苷酸(按应用)</b-dropdown-item>
                                         </b-nav-item-dropdown>
                                         <b-nav-item-dropdown text="点击化学" variant="hover">
                                             <b-dropdown-item href="#">按化学成分点击试剂</b-dropdown-item>
@@ -72,11 +72,11 @@
                                             <b-dropdown-item href="#">LEXSY栽培</b-dropdown-item>
                                         </b-nav-item-dropdown>
                                         <b-nav-item-dropdown text="蛋白质类" variant="hover">
-                                            <b-dropdown-item href="#">重组蛋白</b-dropdown-item>
-                                            <b-dropdown-item href="#">天然蛋白质</b-dropdown-item>
+                                            <b-dropdown-item href="/productThree">重组蛋白</b-dropdown-item>
+                                            <b-dropdown-item href="/producFour">天然蛋白质</b-dropdown-item>
                                         </b-nav-item-dropdown>
                                         <b-nav-item-dropdown text="晶体学和cryo-em" variant="hover">
-                                            <b-dropdown-item href="#">赛选</b-dropdown-item>
+                                            <b-dropdown-item href="/producFive">赛选</b-dropdown-item>
                                             <b-dropdown-item href="#">赛选膜蛋白</b-dropdown-item>
                                         </b-nav-item-dropdown>
                                         <b-nav-item-dropdown text="探针与表观遗传学" variant="hover">
