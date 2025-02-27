@@ -14,8 +14,8 @@
                 <div class="col-md-3">
                     <div class="h4"><a target="_self" href="">核苷酸和核苷</a></div>
                     <ul>
-                        <li><a href="">核苷酸结构</a></li>
-                        <li><a href="">核苷酸 (按应用)</a></li>
+                        <li><a href="/productOne">核苷酸结构</a></li>
+                        <li><a href="/productTwo">核苷酸 (按应用)</a></li>
                     </ul>
                     <div class="h4"><a target="_self" href="">点击化学</a></div>
                     <ul>
@@ -37,12 +37,12 @@
                     </ul>
                     <div class="h4"><a target="_self" href="">蛋白质类</a></div>
                     <ul>
-                        <li><a href="">重组蛋白</a></li>
-                        <li><a href="">天然蛋白质</a></li>
+                        <li><a href="/productThree">重组蛋白</a></li>
+                        <li><a href="/producFour">天然蛋白质</a></li>
                     </ul>
                     <div class="h4"><a target="_self" href="">晶体学和cryo-em</a></div>
                     <ul>
-                        <li><a href="">筛选</a></li>
+                        <li><a href="/producFive">筛选</a></li>
                         <li><a href="">筛选膜蛋白</a></li>
                     </ul>
                 </div>
