@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "products": "Products",
+    "resources": "Resources",
+    "support": "Support",
+    "faq": "FAQ",
+    "cart": "Cart",
+    "search": "Search CAS#, product, catalog no..."
+  },
+  "hero": {
+    "badge": "109+ Research Products Available",
+    "title": "High-Purity Biochemical Reagents",
+    "subtitle": "Modified nucleotides and molecular biology tools for demanding research. HPLC-purified, cold chain shipped worldwide.",
+    "browse": "Browse Products",
+    "quote": "Request a Quote"
+  },
+  "home": {
+    "categories": "Product Categories",
+    "allProducts": "All Products",
+    "reagents": "reagents",
+    "viewAll": "View all",
+    "browse": "Browse"
+  },
+  "category": {
+    "products": "products",
+    "noProducts": "No products found.",
+    "loadMore": "Load More",
+    "of": "of"
+  },
+  "product": {
+    "formula": "Formula",
+    "molWeight": "Mol. Weight",
+    "purity": "Purity",
+    "concentration": "Concentration",
+    "storage": "Storage",
+    "shipping": "Shipping",
+    "synonyms": "Synonyms & Introduction",
+    "description": "Description",
+    "datasheet": "Datasheet",
+    "msds": "MSDS",
+    "order": "Order",
+    "packageSize": "Package Size",
+    "quantity": "Quantity",
+    "total": "Total",
+    "addToCart": "Add to Cart",
+    "requestQuote": "Request Quote",
+    "inStock": "In Stock",
+    "leadTime": "Lead time",
+    "ruo": "For research use only.",
+    "addedToast": "Added to cart",
+    "adding": "Adding..."
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "emptyHint": "Browse our product catalog to find what you need.",
+    "browseProducts": "Browse Products",
+    "subtotal": "Subtotal",
+    "exclNote": "Prices exclude VAT, shipping, and customs duties.",
+    "continueShopping": "Continue Shopping",
+    "proceedQuote": "Proceed to Quote",
+    "remove": "Remove",
+    "items": "items"
+  },
+  "search": {
+    "title": "Search",
+    "results": "results found",
+    "noResults": "No results found",
+    "hint": "Try searching by CAS number, product name, or catalog number."
+  },
+  "sidebar": {
+    "categories": "Categories",
+    "advancedSearch": "Advanced Search"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Ordering, storage, and technical information for SciReagent products.",
+    "contactPrompt": "Didn't find your answer?",
+    "contactSupport": "Contact our technical support team at"
+  },
+  "footer": {
+    "tagline": "High-purity biochemical reagents for research. HPLC-purified, cold chain shipped worldwide.",
+    "products": "Products",
+    "support": "Support",
+    "contact": "Contact",
+    "datasheets": "Datasheets & MSDS",
+    "ordering": "Ordering Information",
+    "shipping": "Shipping & Delivery",
+    "terms": "Terms & Conditions",
+    "copyright": "All products are for research use only."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "home": "Home"
+  }
+}

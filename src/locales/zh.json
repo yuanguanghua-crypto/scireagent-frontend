@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "products": "产品",
+    "resources": "资源",
+    "support": "支持",
+    "faq": "常见问题",
+    "cart": "购物车",
+    "search": "搜索 CAS号、产品名、货号..."
+  },
+  "hero": {
+    "badge": "109+ 研究产品可供选择",
+    "title": "高纯度生化试剂",
+    "subtitle": "修饰核苷酸和分子生物学工具，满足苛刻的研究需求。HPLC纯化，冷链全球配送。",
+    "browse": "浏览产品",
+    "quote": "询价"
+  },
+  "home": {
+    "categories": "产品分类",
+    "allProducts": "全部产品",
+    "reagents": "个试剂",
+    "viewAll": "查看全部",
+    "browse": "浏览"
+  },
+  "category": {
+    "products": "个产品",
+    "noProducts": "暂无产品。",
+    "loadMore": "加载更多",
+    "of": "/"
+  },
+  "product": {
+    "formula": "分子式",
+    "molWeight": "分子量",
+    "purity": "纯度",
+    "concentration": "浓度",
+    "storage": "储存条件",
+    "shipping": "运输条件",
+    "synonyms": "同义词与简介",
+    "description": "产品描述",
+    "datasheet": "产品数据表",
+    "msds": "安全数据表",
+    "order": "订购",
+    "packageSize": "包装规格",
+    "quantity": "数量",
+    "total": "合计",
+    "addToCart": "加入购物车",
+    "requestQuote": "询价",
+    "inStock": "现货",
+    "leadTime": "货期",
+    "ruo": "仅供科研使用。",
+    "addedToast": "已加入购物车",
+    "adding": "正在添加..."
+  },
+  "cart": {
+    "title": "购物车",
+    "empty": "购物车为空",
+    "emptyHint": "浏览产品目录找到您需要的试剂。",
+    "browseProducts": "浏览产品",
+    "subtotal": "小计",
+    "exclNote": "价格不含增值税、运费和关税。",
+    "continueShopping": "继续购物",
+    "proceedQuote": "提交询价",
+    "remove": "删除",
+    "items": "件"
+  },
+  "search": {
+    "title": "搜索",
+    "results": "条结果",
+    "noResults": "未找到结果",
+    "hint": "尝试使用 CAS号、产品名称或货号搜索。"
+  },
+  "sidebar": {
+    "categories": "分类浏览",
+    "advancedSearch": "高级搜索"
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "SciReagent 产品的订购、储存和技术信息。",
+    "contactPrompt": "没找到答案？",
+    "contactSupport": "联系技术支持团队："
+  },
+  "footer": {
+    "tagline": "高纯度生化试剂，服务全球科研实验室。HPLC纯化，冷链配送。",
+    "products": "产品",
+    "support": "支持",
+    "contact": "联系我们",
+    "datasheets": "数据表与MSDS",
+    "ordering": "订购信息",
+    "shipping": "运输与配送",
+    "terms": "条款与条件",
+    "copyright": "所有产品仅供科研使用。"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "出现错误",
+    "retry": "重试",
+    "home": "首页"
+  }
+}
