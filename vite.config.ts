@@ -16,7 +16,7 @@ export default defineConfig({
     port: 8080,
     proxy: {
       '/api': {
-        target: 'http://localhost:9090',
+        target: 'http://localhost:8000',
         changeOrigin: true,
         configure: (proxy) => {
           proxy.on('error', (err) => console.error('Proxy error:', err))
